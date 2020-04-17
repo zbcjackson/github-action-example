@@ -7,14 +7,14 @@ jobs:
     # Containers must run in Linux based operating systems
     runs-on: ubuntu-latest
     # Docker Hub image that `container-job` executes in
-    container: node:10.18-jessie
+    container: node:12-slim
 
     # Service containers to run with `container-job`
     services:
       # Label used to access the service container
-      postgres:
+      goosesquare_postgres:
         # Docker Hub image
-        image: postgres
+        image: postgres:12-alpine
         # Provide the password for postgres
         env:
           POSTGRES_PASSWORD: postgres
