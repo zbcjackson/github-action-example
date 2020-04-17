@@ -1,0 +1,10 @@
+{
+  "name": "github-action-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "zbcjackson <zbcjackson@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^8.0.2"
+  }
+}
