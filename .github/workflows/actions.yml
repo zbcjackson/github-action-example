@@ -45,3 +45,10 @@ jobs:
           POSTGRES_HOST: goosesquare_postgres
           # The default PostgreSQL port
           POSTGRES_PORT: 5432
+      - name: Publish docker
+        uses: docker/build-push-action@v1
+        with:
+          registry: dockerhub.qingcloud.com
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: goosesquare/test
